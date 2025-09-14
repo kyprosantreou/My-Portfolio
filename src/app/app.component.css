@@ -1,0 +1,576 @@
+.header .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.2rem 2rem;
+
+  /* background: rgba(199, 156, 156, 0.5); */
+  background: transparent;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.nav-links a:hover {
+  color: #22abb5;
+  /* accent color */
+}
+
+/* Burger icon */
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 7px;
+  z-index: 2;
+}
+
+.burger img {
+  width: 35px;
+  height: 35px;
+  filter: invert(1);
+}
+
+.burger div {
+  width: 25px;
+  height: 1px;
+  background-color: #f1f1f1;
+  transition: all 0.3s ease;
+}
+
+/* Burger animation to X */
+.burger .line1.menuOpen {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger .line2.menuOpen {
+  opacity: 0;
+}
+
+.burger .line3.menuOpen {
+  transform: rotate(-45deg) translate(5px, -5px);
+} 
+
+
+/* ------- About Section ------- */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  margin: 0;
+  padding: 2rem;
+  background-color: #2c3947;
+}
+
+.about h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-top: 100px;
+  font-size: 3rem;
+  color: #333;
+  font-family: 'Quicksand', sans-serif;
+  color: #f1f1f1;
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 900px;
+}
+
+.profile-picture {
+  flex-shrink: 0;
+  overflow: hidden;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 10%;
+  /* circle effect, remove if you want square */
+  box-shadow: 10px 10px 10px rgba(0, 255, 242, 0.15);
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  flex: 1;
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  font-family: 'Quicksand', sans-serif;
+  color: #f1f1f1;
+}
+
+/* Education & Work sections */
+.education,
+.work-experience {
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 500px;
+  color: #f1f1f1;
+}
+
+.education h2,
+.work-experience h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Timeline dark mode */
+.timeline {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 30px;
+  border-left: 3px solid #22abb5;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.timeline-item::before {
+  background-color: #22abb5;
+  border: 3px solid #2c3947;
+  /* blends with about background */
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.05);
+  color: #f1f1f1;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.timeline-content h3 {
+  color: #22abb5;
+}
+
+.timeline-date {
+  color: #22abb5;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+/* -------Skills--------------- */
+.skills {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #C0C8CA;
+}
+
+.skills h2 {
+  font-size: 2rem;
+  color: #2c3947;
+  margin-bottom: 2rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Wrapper for all sections */
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* stack Languages and Tools vertically */
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skills-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* cards side by side */
+  gap: 1.5rem;
+}
+
+/* Section title spans full width */
+.section-title {
+  grid-column: 1 / -1;
+  /* make title stretch across all columns */
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 0.5rem;
+  color: #2c3947;
+}
+
+
+/* Skill card */
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  color: #2c3947;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0px 30px #22abb5;
+}
+
+.skill-card img {
+  width: auto;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3947;
+}
+
+.skill-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #2c3947;
+}
+
+
+/* ---------------- Projects Section ---------------- */
+.projects {
+  padding: 4rem 2rem;
+  background-color: #2c3947;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  color: #f1f1f1;
+  margin-bottom: 2rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.projects-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: #f1f1f1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0px 30px #22abb5;
+}
+
+.project-card a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-card:hover a {
+  text-decoration: underline;
+}
+
+.project-card img {
+  width: 50%;
+  height: 50%;
+  border-radius: 0.8rem;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  margin-left: 25%;
+}
+
+.project-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+
+/* ---------------- Contact Section ---------------- */
+.contact {
+  padding: 5rem 2rem;
+  background: #C0C8CA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #2c3947, #1f2937);
+  border-radius: 1.2rem;
+  padding: 3rem 2rem;
+  max-width: 650px;
+  width: 100%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+.contact-card h2 {
+  font-size: 2.2rem;
+  color: #f1f1f1;
+  margin-bottom: 1rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem 1.2rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  outline: none;
+  resize: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #f1f1f1;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 8px #22abb5;
+}
+
+.contact-form button {
+  padding: 1rem;
+  background: #22abb5;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #1a8b92;
+  transform: translateY(-2px);
+}
+
+/* Social Media Section */
+.social-media {
+  padding: 3rem 2rem;
+  background: #2c3947;
+  /* ίδιο με projects */
+  text-align: center;
+}
+
+.social-media h2 {
+  font-size: 2rem;
+  color: #f1f1f1;
+  margin-bottom: 2rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icons a {
+  width: 80px;
+  height:80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0px 30px #22abb5;
+}
+
+.social-icons a img.icon {
+  width: 80px;
+  height: 80px;
+}
+
+.social-icons a:hover img.icon {
+  filter: none;
+}
+
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+    margin-left: 70%;
+  }
+
+  .header .navbar{
+    background: rgba(44, 57, 71, 0.95);
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(44, 57, 71, 0.95);
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    max-height: 0; 
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    max-height: 500px; 
+  }
+
+  .nav-links li {
+    margin: 0.1rem ;
+  }
+  
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about h1 {
+    font-size: 1.7rem;
+    margin-top: 80px;
+    margin-left: -50px;
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+    text-align: center;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    hyphens: auto;          
+    max-width: 90%; 
+    margin-left: -10px;     
+  }
+
+  .profile-picture {
+    width: 15rem;
+    height: 15rem;
+    margin-bottom: 1.5rem;
+    margin-left: -50px;
+  }
+
+  .skills-wrapper {
+    flex-direction: column;
+  }
+
+  .education,.work-experience{
+    margin-left: -50px;
+    max-width: 90%;
+  }
+
+  .skills-wrapper {
+    gap: 2rem;
+  }
+
+  .project-card img {
+    width: 40%;
+    height: 40%;
+    margin-left: 30%;
+  }
+
+  .project-card p{
+    font-size: 0.9rem;
+  }
+
+  .project-card h3{
+    font-size: 1.1rem;
+  }
+
+  .social-media h2 {
+    font-size: 1.5rem;
+  }
+
+  .social-icons a img.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+  }
+
+  .social-icons a:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}

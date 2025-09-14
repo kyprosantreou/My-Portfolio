@@ -1,0 +1,335 @@
+<main class="main">
+  <header class="header">
+    <!-- <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#social-media">Connect With Me</a></li>
+      </ul>
+    </nav> -->
+    <nav class="navbar">
+      <div class="burger" (click)="toggleMenu()">
+        <img *ngIf="!menuOpen" src="burger.png" alt="Menu">
+        <img *ngIf="menuOpen" src="close.png" alt="Close">
+      </div>
+
+      <!-- <div class="burger" (click)="toggleMenu()">
+    <div [class.line1]="menuOpen"></div>
+    <div [class.line2]="menuOpen"></div>
+    <div [class.line3]="menuOpen"></div>
+  </div> -->
+
+      <ul class="nav-links" [class.active]="menuOpen">
+        <li><a href="#about" (click)="closeMenu()">About</a></li>
+        <li><a href="#skills" (click)="closeMenu()">Skills</a></li>
+        <li><a href="#projects" (click)="closeMenu()">Projects</a></li>
+        <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+        <li><a href="#social-media" (click)="closeMenu()">Connect With Me</a></li>
+      </ul>
+    </nav>
+
+
+  </header>
+
+
+  <div class="about" id="about">
+    <h1>Welcome To My Portfolio</h1>
+
+    <div class="about-wrapper">
+      <div class="profile-picture">
+        <img src="profile.jpg" alt="profile-picture">
+      </div>
+      <div class="content">
+        <p>
+          I'm Kypros Andreou, a passionate programmer
+          with a strong
+          interest in bioinformatics,
+          data science, and the application of technology
+          in medical research. I enjoy exploring complex challenges,
+          building intelligent systems, and continuously expanding my knowledge
+          across diverse areas of computer science.
+        </p>
+      </div>
+    </div>
+
+    <section class="education">
+      <h2>Education</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-date">October 2021 - September 2025</div>
+          <div class="timeline-content">
+            <h3>Bachelor in Informatics</h3>
+            <p>Ionian University</p>
+            <!-- <p>Specialization in Bioinformatics, Data Science & Machine Learning.</p> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-experience">
+      <h2>Work Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-date">September 2025 - Present</div>
+          <div class="timeline-content">
+            <h3>Python Developer / Support Engineer</h3>
+            <p>Eplan Consultants</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">June 2024 - August 2024</div>
+          <div class="timeline-content">
+            <h3>Bioinformatics Intern</h3>
+            <p>CING Cyprus</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+
+  <div class="skills" id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skills-wrapper">
+      <!-- Languages -->
+      <div class="skills-section">
+        <h3 class="section-title">Languages</h3>
+
+        <div class="skill-card">
+          <img src="python.png" alt="Python">
+          <h3>Python</h3>
+          <p>Data science, machine learning, and automation.</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="c++.png" alt="C++">
+          <h3>C++</h3>
+          <p>Arduino and embedded systems.</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="R.png" alt="R">
+          <h3>R</h3>
+          <p>Data analysis and statistical computing.</p>
+        </div>
+
+        <!-- moved MySQL here, right after C++ -->
+        <div class="skill-card">
+          <img src="mysql.png" alt="MySQL">
+          <h3>MySQL</h3>
+          <p>Relational database management and queries.</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="html.png" alt="HTML">
+          <h3>HTML</h3>
+          <p>Structure and semantic web design.</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="css.png" alt="CSS">
+          <h3>CSS</h3>
+          <p>Responsive and modern web styling.</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="js.png" alt="JavaScript">
+          <h3>JavaScript</h3>
+          <p>Dynamic and interactive front-end development.</p>
+        </div>
+      </div>
+
+
+      <!-- Tools -->
+      <div class="skills-section">
+        <h3 class="section-title">Tools</h3>
+
+        <div class="skill-card">
+          <img src="Flask.png" alt="Flask">
+          <h3>Flask</h3>
+          <p>Building lightweight and scalable web applications.</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="angular.png" alt="Angular">
+          <h3>Angular</h3>
+          <p>Building dynamic and modern web applications.</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="docker.png" alt="Docker">
+          <h3>Docker</h3>
+          <p>Containerization and deployment of applications.</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="git.png" alt="Git">
+          <h3>Git</h3>
+          <p>Version control and team collaboration.</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="github.png" alt="GitHub">
+          <h3>GitHub</h3>
+          <p>Code hosting and CI/CD workflows.</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="linux.png" alt="Linux">
+          <h3>Linux</h3>
+          <p>System administration and development environment.</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="TensorFlow.png" alt="TensorFlow">
+          <h3>TensorFlow</h3>
+          <p>Building and training machine learning models.</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="scikit-learn.png" alt="scikit-learn">
+          <h3>scikit-learn</h3>
+          <p>Building and training machine learning models.</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="Streamlit.png" alt="Streamlit">
+          <h3>Streamlit</h3>
+          <p>Building and deploying machine learning applications.</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="raspberry-pi.png" alt="Raspberry Pi">
+          <h3>Raspberry Pi</h3>
+          <p>Embedded systems and IoT projects./Hosting Server</p>
+        </div>
+
+        <div class="skill-card">
+          <img src="arduino.png" alt="Arduino">
+          <h3>Arduino</h3>
+          <p>Embedded systems and IoT projects.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="projects" id="projects">
+    <h2>My Projects</h2>
+
+    <div class="projects-wrapper">
+      <div class="project-card">
+        <img src="brain.png" alt="Brain Tumor Detector">
+        <h3><a href="https://github.com/kyprosantreou/Brain-Tumor-Detection">Brain Tumor Detector 🔗</a> </h3>
+        <p>A simple tool designed to help analyze MRI scans, group (cluster) tumor images, and predict brain tumor types
+          using machine learning. This project is built mainly for educational purposes to demonstrate how AI and data
+          visualization can be used in medical imaging.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <img src="magnifier.png" alt="Corfu Butterflies Explorer">
+        <h3><a href="https://corfu-butterflies.onrender.com/">Corfu Butterflies Explorer 🔗</a></h3>
+        <p>Butterfly Explorer is an interactive Streamlit application that allows users to explore butterfly species
+          based on their visual traits like color, pattern, and extra features. It uses natural language processing
+          (NLP) with spaCy to interpret search queries and match butterfly attributes accordingly.
+        </p>
+      </div>
+
+      <div class="project-card" id="project-card">
+        <img src="thyroid.png" alt="Project 3">
+        <h3><a href="https://hashimotos-disease-prediction.onrender.com/"> Hashimoto's Disease
+            Predictor 🔗</a></h3>
+        <p>This program is a streamlit web application that uses machine learning to predict when someone is suffering
+          from Hashimoto's by filling in the appropriate fields with the corresponding results from their blood tests.
+        </p>
+      </div>
+
+      <div class="project-card" id="project-card">
+        <img src="crm.png" alt="Project 3">
+        <h3><a href="https://github.com/kyprosantreou/Customer-Management">Customer Management System 🔗</a></h3>
+        <p>This is a simple Customer Management System built using Python and the flet library for creating graphical
+          user interfaces. It allows users to register new customers, manage existing customer data, and export
+          statements.
+        </p>
+      </div>
+
+      <div class="project-card" id="project-card">
+        <img src="lock.png" alt="Project 3">
+        <h3><a href="https://github.com/kyprosantreou/My-Password-Manager">My Password Manager 🔗</a></h3>
+        <p>This application allows users to manage their passwords for various services and accounts. It provides
+          functionality to add, modify, search for, and delete account information securely.
+        </p>
+      </div>
+
+      <div class="project-card" id="project-card">
+        <img src="task.png" alt="Project 3">
+        <h3><a href="https://github.com/kyprosantreou/TaskFlow">TaskFlow 🔗</a></h3>
+        <p>This application allows users to manage their tasks and projects efficiently. It provides features to add,
+          modify, and delete tasks, set deadlines, and track progress.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="contact" id="contact">
+    <div class="contact-card">
+      <h2>Get in Touch</h2>
+      <p>I'd love to hear from you! Fill out the form below and I’ll get back to you as soon as possible.</p>
+
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <!-- Your Web3Forms Access Key -->
+        <input type="hidden" name="access_key" value="10247348-36d0-4b45-a755-d2728d55911e">
+
+        <!-- Optional: Email subject -->
+        <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio">
+
+        <!-- Name -->
+        <input type="text" name="name" placeholder="Your Name" required>
+
+        <!-- Email -->
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <!-- Message -->
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <!-- Submit -->
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+
+  <section class="social-media" id="social-media">
+    <h2>Connect with Me</h2>
+    <div class="social-icons">
+      <a href="https://github.com/kyprosantreou" target="_blank">
+        <img src="github.png" alt="GitHub" class="icon">
+      </a>
+      <a href="kypros-andreou-a8403623a" target="_blank">
+        <img src="linkedin.png" alt="LinkedIn" class="icon">
+      </a>
+      <a href="https://x.com/AntreouKypros" target="_blank">
+        <img src="twitter.png" alt="Twitter" class="icon">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100009714181578" target="_blank">
+        <img src="facebook.png" alt="Facebook" class="icon">
+      </a>
+      <a href="https://instagram.com/_kypros.andreou_" target="_blank">
+        <img src="instagram.png" alt="Instagram" class="icon">
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<router-outlet />
