@@ -76,7 +76,7 @@
 
 .burger .line3.menuOpen {
   transform: rotate(-45deg) translate(5px, -5px);
-} 
+}
 
 
 /* ------- About Section ------- */
@@ -450,7 +450,7 @@
 
 .social-icons a {
   width: 80px;
-  height:80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -473,13 +473,13 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .burger {
     display: flex;
     margin-left: 70%;
   }
 
-  .header .navbar{
+  .header .navbar {
     background: rgba(44, 57, 71, 0.95);
   }
 
@@ -492,18 +492,18 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    max-height: 0; 
+    max-height: 0;
     transition: max-height 0.3s ease-in-out;
   }
 
   .nav-links.active {
-    max-height: 500px; 
+    max-height: 500px;
   }
 
   .nav-links li {
-    margin: 0.1rem ;
+    margin: 0.1rem;
   }
-  
+
   .about-wrapper {
     flex-direction: column;
     text-align: center;
@@ -514,15 +514,15 @@
     margin-top: 80px;
     margin-left: -50px;
   }
-  
+
   .content p {
     font-size: 1.2rem;
     text-align: center;
-    word-wrap: break-word; 
-    overflow-wrap: break-word; 
-    hyphens: auto;          
-    max-width: 90%; 
-    margin-left: -10px;     
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 90%;
+    margin-left: -10px;
   }
 
   .profile-picture {
@@ -532,17 +532,46 @@
     margin-left: -50px;
   }
 
-  .skills-wrapper {
-    flex-direction: column;
+  /* .skills-wrapper {
+    flex-direction: row;  
+    flex-wrap: wrap;     
+    justify-content: center;
+    gap: 1rem;
   }
 
-  .education,.work-experience{
+  .skill-card {
+    width: 120px;  
+    padding: 2rem;
+  } */
+
+
+  /* .skills-wrapper {
+    gap: 2rem;
+  } */
+
+  .skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .skills-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.7rem;
+    justify-items: center;
+  }
+
+  .skill-card {
+    width: 100%;
+    max-width: 150px;
+    padding: 1rem;
+  }
+
+  .education,
+  .work-experience {
     margin-left: -50px;
     max-width: 90%;
-  }
-
-  .skills-wrapper {
-    gap: 2rem;
   }
 
   .project-card img {
@@ -551,11 +580,11 @@
     margin-left: 30%;
   }
 
-  .project-card p{
+  .project-card p {
     font-size: 0.9rem;
   }
 
-  .project-card h3{
+  .project-card h3 {
     font-size: 1.1rem;
   }
 
@@ -574,3 +603,121 @@
     box-shadow: none;
   }
 }
+
+/* Tablet: 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about h1 {
+    font-size: 2rem;
+    margin-top: 80px;
+    margin-left: -50px;
+  }
+
+  .content p {
+    font-size: 1.2rem;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 90%;
+    margin-left: 0px;
+  }
+
+  .profile-picture {
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: 1.5rem;
+    margin-left: -30px;
+  }
+
+
+  .skills-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    /* centers whole grid */
+  }
+
+  .skill-card {
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .project-card {
+    height: 500px;
+  }
+
+  .project-card p {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop: 1025px and above */
+@media (min-width: 1025px) {
+  .header .navbar {
+    height: auto;
+  }
+
+  .nav-links a{
+    font-size: 24px;
+  }
+
+  .about-wrapper {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .content p {
+    font-size: 1.2rem;
+    text-align: left;
+    max-width: 100%;
+    margin-left: 0px;
+  }
+
+  .profile-picture {
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  .skills-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .skill-card {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .projects-wrapper{
+    gap: 7rem;
+  }
+
+  .project-card {
+    height: 100%;
+    width: 340px;
+  }
+
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-card p {
+    font-size: 1.1rem;
+  }
+}
+
